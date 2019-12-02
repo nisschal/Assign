@@ -478,7 +478,7 @@ namespace Assignment
             }
             Console.Text = console_text;    
         }
-
+        
         private void Console_TextChanged(object sender, EventArgs e)
         {
 
