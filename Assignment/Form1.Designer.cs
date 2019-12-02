@@ -69,6 +69,7 @@
             // 
             // menuStrip2
             // 
+            this.menuStrip2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -119,6 +120,7 @@
             // 
             // panel_draw
             // 
+            this.panel_draw.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel_draw.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel_draw.Location = new System.Drawing.Point(16, 33);
             this.panel_draw.Margin = new System.Windows.Forms.Padding(4);
@@ -151,7 +153,7 @@
             // 
             // Reset
             // 
-            this.Reset.Location = new System.Drawing.Point(16, 528);
+            this.Reset.Location = new System.Drawing.Point(16, 519);
             this.Reset.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Reset.Name = "Reset";
             this.Reset.Size = new System.Drawing.Size(1060, 52);
@@ -181,12 +183,12 @@
             // 
             this.Console.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.Console.ForeColor = System.Drawing.SystemColors.InactiveBorder;
-            this.Console.Location = new System.Drawing.Point(16, 598);
+            this.Console.Location = new System.Drawing.Point(16, 577);
             this.Console.Margin = new System.Windows.Forms.Padding(4);
             this.Console.Multiline = true;
             this.Console.Name = "Console";
             this.Console.ReadOnly = true;
-            this.Console.Size = new System.Drawing.Size(1059, 95);
+            this.Console.Size = new System.Drawing.Size(1059, 112);
             this.Console.TabIndex = 13;
             this.Console.Text = "Console:";
             this.Console.TextChanged += new System.EventHandler(this.Console_TextChanged);

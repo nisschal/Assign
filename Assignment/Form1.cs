@@ -462,11 +462,11 @@ namespace Assignment
 
             if (drawPolgon == true)
             {
-                Pen blackPen = new Pen(Color.Black, 3);
+                Pen blackPen = new Pen(Color.OrangeRed, 3);
                 PointF point1 = new PointF(300.0F, 50.0F);
                 PointF point2 = new PointF(400.0F, 25.0F);
                 PointF point3 = new PointF(200.0F, 5.0F);
-                string[] str = new string[5];
+                string[] str = new string[3];
                 PointF[] curvePoints =
                  {
                 point1,
