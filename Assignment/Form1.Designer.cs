@@ -34,15 +34,15 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_draw = new System.Windows.Forms.Panel();
             this.Clear = new System.Windows.Forms.Button();
-            this.Execute = new System.Windows.Forms.Button();
+            this.SingleExecute = new System.Windows.Forms.Button();
             this.Reset = new System.Windows.Forms.Button();
             this.textBox_multi = new System.Windows.Forms.TextBox();
             this.SingleLine = new System.Windows.Forms.TextBox();
             this.Console = new System.Windows.Forms.TextBox();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +55,7 @@
             this.Run.TabIndex = 0;
             this.Run.Text = "RUN";
             this.Run.UseVisualStyleBackColor = true;
+            this.Run.Click += new System.EventHandler(this.Run_Click);
             // 
             // menuStrip1
             // 
@@ -91,16 +92,23 @@
             // loadToolStripMenuItem
             // 
             this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
-            this.loadToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             this.loadToolStripMenuItem.Text = "Load";
             this.loadToolStripMenuItem.Click += new System.EventHandler(this.loadToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -117,6 +125,7 @@
             this.panel_draw.Name = "panel_draw";
             this.panel_draw.Size = new System.Drawing.Size(1059, 285);
             this.panel_draw.TabIndex = 5;
+            this.panel_draw.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_draw_Paint);
             // 
             // Clear
             // 
@@ -129,16 +138,16 @@
             this.Clear.UseVisualStyleBackColor = true;
             this.Clear.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Execute
+            // SingleExecute
             // 
-            this.Execute.Location = new System.Drawing.Point(752, 465);
-            this.Execute.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Execute.Name = "Execute";
-            this.Execute.Size = new System.Drawing.Size(324, 41);
-            this.Execute.TabIndex = 9;
-            this.Execute.Text = "Execute";
-            this.Execute.UseVisualStyleBackColor = true;
-            this.Execute.Click += new System.EventHandler(this.button3_Click);
+            this.SingleExecute.Location = new System.Drawing.Point(752, 465);
+            this.SingleExecute.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SingleExecute.Name = "SingleExecute";
+            this.SingleExecute.Size = new System.Drawing.Size(324, 41);
+            this.SingleExecute.TabIndex = 9;
+            this.SingleExecute.Text = "Execute";
+            this.SingleExecute.UseVisualStyleBackColor = true;
+            this.SingleExecute.Click += new System.EventHandler(this.button3_Click);
             // 
             // Reset
             // 
@@ -149,6 +158,7 @@
             this.Reset.TabIndex = 10;
             this.Reset.Text = "RESET";
             this.Reset.UseVisualStyleBackColor = true;
+            this.Reset.Click += new System.EventHandler(this.Reset_Click);
             // 
             // textBox_multi
             // 
@@ -179,13 +189,7 @@
             this.Console.Size = new System.Drawing.Size(1059, 95);
             this.Console.TabIndex = 13;
             this.Console.Text = "Console:";
-            // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.Console.TextChanged += new System.EventHandler(this.Console_TextChanged);
             // 
             // Form1
             // 
@@ -196,7 +200,7 @@
             this.Controls.Add(this.SingleLine);
             this.Controls.Add(this.textBox_multi);
             this.Controls.Add(this.Reset);
-            this.Controls.Add(this.Execute);
+            this.Controls.Add(this.SingleExecute);
             this.Controls.Add(this.Clear);
             this.Controls.Add(this.panel_draw);
             this.Controls.Add(this.Run);
@@ -206,6 +210,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.ResumeLayout(false);
@@ -224,7 +229,7 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.Panel panel_draw;
         private System.Windows.Forms.Button Clear;
-        private System.Windows.Forms.Button Execute;
+        private System.Windows.Forms.Button SingleExecute;
         private System.Windows.Forms.Button Reset;
         private System.Windows.Forms.TextBox textBox_multi;
         private System.Windows.Forms.TextBox SingleLine;
