@@ -25,6 +25,7 @@ namespace Assignment
         private void button3_Click(object sender, EventArgs e)
         {
             button3_Click.Clear(0);
+            hllo world;
         }
 
         private void loadToolStripMenuItem_Click(object sender, EventArgs e)
