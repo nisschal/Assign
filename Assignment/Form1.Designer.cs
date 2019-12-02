@@ -117,7 +117,7 @@
             // 
             this.panel_draw.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel_draw.Location = new System.Drawing.Point(16, 33);
-            this.panel_draw.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_draw.Margin = new System.Windows.Forms.Padding(4);
             this.panel_draw.Name = "panel_draw";
             this.panel_draw.Size = new System.Drawing.Size(1059, 285);
             this.panel_draw.TabIndex = 5;
@@ -157,7 +157,7 @@
             // textBox_multi
             // 
             this.textBox_multi.Location = new System.Drawing.Point(16, 341);
-            this.textBox_multi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_multi.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_multi.Multiline = true;
             this.textBox_multi.Name = "textBox_multi";
             this.textBox_multi.Size = new System.Drawing.Size(711, 112);
@@ -166,7 +166,7 @@
             // textBox_single
             // 
             this.textBox_single.Location = new System.Drawing.Point(16, 474);
-            this.textBox_single.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_single.Margin = new System.Windows.Forms.Padding(4);
             this.textBox_single.Name = "textBox_single";
             this.textBox_single.Size = new System.Drawing.Size(711, 22);
             this.textBox_single.TabIndex = 12;
@@ -176,9 +176,10 @@
             this.textBox3.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.textBox3.ForeColor = System.Drawing.SystemColors.InactiveBorder;
             this.textBox3.Location = new System.Drawing.Point(16, 598);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(1059, 95);
             this.textBox3.TabIndex = 13;
             this.textBox3.Text = "Console:";
