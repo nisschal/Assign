@@ -25,11 +25,10 @@ namespace Assignment
 
         private void button3_Click(object sender, EventArgs e)
         {
-            button3_Click.Clear(0);
-            hllo world;
+           
         }
 
-        private void loadToolStripMenuItem_Click(object sender, EventArgs e)
+        private  void loadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Stream myStream = null;//instantiating null value for stra
             OpenFileDialog openFileDialog1 = new OpenFileDialog();//creating a instance of a dialog box
@@ -55,6 +54,40 @@ namespace Assignment
                     MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
                 }
             }
+        }
+
+        private async void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sfd = new SaveFileDialog();//creating a instance of a dialog box
+            sfd.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*"; //creting text form
+            sfd.RestoreDirectory = true;
+
+            if (sfd.ShowDialog() == DialogResult.OK)//if choose data is fine then enter todialog box
+            {
+                try
+                {
+
+                    using (StreamWriter write = new StreamWriter(sfd.FileName)) //dispose is done automatically
+                    {
+                        await write.WriteLineAsync(textBox_multi.Text);//loading text file in multipleLine
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
+                }
+            }
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Application");
         }
     }
 }
