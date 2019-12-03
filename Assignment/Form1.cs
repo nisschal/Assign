@@ -40,7 +40,9 @@ namespace Assignment
         int thickness; //thickness of pen
         int loopCounter; //loopcounter to hold loop value in loop code
 
-
+        /// <summary>
+        /// Form 1 Shape Created
+        /// </summary>
         public Form1()
         {
             InitializeComponent();
@@ -49,7 +51,11 @@ namespace Assignment
             shape1 = shapeFactory.getShape("Circle");
             shape2 = shapeFactory.getShape("Rectangle");
         }
-
+        /// <summary>
+        /// Button2 Clear Function
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             textBox_multi.Clear();
@@ -65,7 +71,11 @@ namespace Assignment
             this.movePointer = false;
             this.drawPolgon = false;
         }
-
+        /// <summary>
+        /// Run Button Function
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Run_Click(object sender, EventArgs e)
         {
             try
@@ -390,7 +400,11 @@ namespace Assignment
             Console.Text = console_text;
             panel_draw.Refresh(); //refresh with every drawing equals to true
         }
-
+        /// <summary>
+        /// Reset Button Function
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Reset_Click(object sender, EventArgs e)
         {
             circleObjects.Clear();
@@ -418,7 +432,11 @@ namespace Assignment
             Run_Click(sender, e);
             this.textBox_multi.Clear();
         }
-
+        /// <summary>
+        /// Draw to Function
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void panel_draw_Paint(object sender, PaintEventArgs e)
         {
             //Graphics to draw in panel
@@ -478,12 +496,20 @@ namespace Assignment
             }
             Console.Text = console_text;    
         }
-        
+        /// <summary>
+        /// Console Text
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Console_TextChanged(object sender, EventArgs e)
         {
 
         }
-
+        /// <summary>
+        /// Button3 Function 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button3_Click(object sender, EventArgs e)
         {
             try
@@ -810,7 +836,11 @@ namespace Assignment
             Console.Text = console_text;
             panel_draw.Refresh(); //refresh with every drawing equals to true
         }
-
+        /// <summary>
+        /// Menu Bar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private  void loadToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Stream myStream = null;//instantiating null value for stra
@@ -838,7 +868,11 @@ namespace Assignment
                 }
             }
         }
-
+        /// <summary>
+        /// Save File 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SaveFileDialog sfd = new SaveFileDialog();//creating a instance of a dialog box
@@ -862,12 +896,20 @@ namespace Assignment
                 }
             }
         }
-
+        /// <summary>
+        /// Exit Function
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        /// <summary>
+        /// Help Tool
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show("For drawing without parameter:\n" +
@@ -880,7 +922,11 @@ namespace Assignment
                             "For looping: \n r = 100 \n loop 4 \n r + 100 \n draw circle r \n end loop \n \n " +
                             "For if statement: \n counter = 5 \n if counter = 5 then \n draw circle 100 \n end if \n \n");
         }
-
+        /// <summary>
+        /// Load Function
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
             circle = new Circle(); //creates new circle

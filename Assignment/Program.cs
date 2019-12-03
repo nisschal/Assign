@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Assignment
-{
+{   /// <summary>
+/// Entry Point of Application
+/// </summary>
     static class Program
     {
         /// <summary>

@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Assignment
-{
+{   /// <summary>
+/// Shape Conditions
+/// </summary>
     public class ShapeFactoryDefination
     {
         /// <summary>

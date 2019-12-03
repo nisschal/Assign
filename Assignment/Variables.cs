@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Assignment
-{
+{   /// <summary>
+/// Variable Class
+/// </summary>
     public class Variables
     {
         /// <summary>

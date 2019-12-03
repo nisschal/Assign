@@ -6,7 +6,9 @@ using System.Drawing;
 using System.Threading.Tasks;
 
 namespace Assignment
-{
+{   /// <summary>
+/// Shape Class
+/// </summary>
     public abstract class Shape
     {
         //variable declaration and initialization
@@ -23,7 +25,12 @@ namespace Assignment
             this.x = x;
             this.y = y;
         }
-
+        /// <summary>
+        /// Parameterized constructor
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <param name="z"></param>
         public Shape(int x, int y, int z)
         {
             this.x = x;

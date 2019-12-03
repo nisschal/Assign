@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Assignment
-{
+{   /// <summary>
+/// ShapeFactory Class
+/// </summary>
     public class ShapeFactory : AbstractFactory
     {
         /// <summary>

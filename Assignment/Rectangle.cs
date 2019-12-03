@@ -6,7 +6,9 @@ using System.Drawing;
 using System.Threading.Tasks;
 
 namespace Assignment
-{
+{   /// <summary>
+/// Rectangle Class
+/// </summary>
     public class Rectangle : Shape
     {
         //declaration of variables

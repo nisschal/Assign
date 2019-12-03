@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Assignment
-{
+{   /// <summary>
+/// ConditionController Class
+/// </summary>
     class ConditionController
     {
         //declaration

@@ -6,7 +6,9 @@ using System.Drawing;
 using System.Threading.Tasks;
 
 namespace Assignment
-{
+{   /// <summary>
+/// Circle Class
+/// </summary>
     public class Circle : Shape
     {
         int radius;//declaration of the radius
@@ -30,7 +32,10 @@ namespace Assignment
         {
 
         }
-
+        /// <summary>
+        /// Radius Circle
+        /// </summary>
+        /// <param name="radius"></param>
         public Circle(int radius)
         {
             this.radius = radius;
