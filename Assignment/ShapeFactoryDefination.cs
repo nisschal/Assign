@@ -17,7 +17,7 @@ namespace Assignment
         /// <returns></returns>
         public bool isCircle(string shape)
         {
-            if (shape == "Circle")
+            if (shape != "Circle")
             {
                 return true;
             }
