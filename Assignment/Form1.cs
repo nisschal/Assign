@@ -106,7 +106,7 @@ namespace Assignment
                     //single code line
                     String code_line = parts[i];
 
-                    char[] code_delimiters = new char[] { ' ' };
+                    char[] code_delimiters = new char[] { ' ',',' };
                     words = code_line.Split(code_delimiters, StringSplitOptions.RemoveEmptyEntries); //holds invididuals code line
 
                     //calculation to add value to variable
@@ -420,17 +420,10 @@ namespace Assignment
             this.drawPolgon = false;
             panel_draw.Refresh();
             this.SingleLine.Clear();
-            StreamReader s = File.OpenText("D:\\Workspace\\Assignment\\move.txt");
-            do
-            {
-                string line = s.ReadLine();
-                if (line == null) break;
-                textBox_multi.Text += line;
-
-            }
-            while (true);
-            Run_Click(sender, e);
-            this.textBox_multi.Clear();
+            moveX = 0;
+            moveY = 0;
+            Console.Clear();
+           
         }
         /// <summary>
         /// Draw to Function
@@ -540,7 +533,7 @@ namespace Assignment
                     //single code line
                     String code_line = parts[i];
 
-                    char[] code_delimiters = new char[] { ' ' };
+                    char[] code_delimiters = new char[] { ' ',',' };
                     words = code_line.Split(code_delimiters, StringSplitOptions.RemoveEmptyEntries); //holds invididuals code line
 
                     //calculation to add value to variable
@@ -917,7 +910,7 @@ namespace Assignment
                             "For drawing with parameter: \n r = 100 \n draw circle r \n h = 100 \n w = 100 \n draw rectangle h w \n \n" +
                             "For moving cursor: \n moveto 100 100 \n \n" +
                             "For drawing line: \n drawto 100 100\n \n" +
-                            "For choosing color: \n color = red \n \n" +
+                            "For choosing color: \n color red thickness \n \n" +
                             "For declaring variable: \n counter = 100 \n \n" +
                             "For looping: \n r = 100 \n loop 4 \n r + 100 \n draw circle r \n end loop \n \n " +
                             "For if statement: \n counter = 5 \n if counter = 5 then \n draw circle 100 \n end if \n \n");
