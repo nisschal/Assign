@@ -1,0 +1,2 @@
+moveto 100 100
+draw triangle 100 200 300
